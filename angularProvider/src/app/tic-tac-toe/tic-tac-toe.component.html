@@ -1,0 +1,16 @@
+<table *ngIf=!gameOver else winnerAnnounce>
+    <tr *ngFor="let item of rows; let rowIndex=index">
+
+        <td *ngFor="let item of columns; let columnIndex=index">
+            <app-cell [activeToken]="this.activeToken" (cellClicked)="onClick($event)" [rowIndex]="rowIndex" [columnIndex]="columnIndex"></app-cell>
+        </td>
+    </tr>
+</table>
+<ng-template #winnerAnnounce>
+<div>Player {{activeToken}} is the winner</div>
+</ng-template>
+
+
+
+
+

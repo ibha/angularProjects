@@ -1,0 +1,11 @@
+<ng-template let-name let-message="message" #template3>  
+    <p>Dear {{name}} , {{message}} </p>
+  </ng-template>
+   
+  <ng-container [ngTemplateOutlet]="template3" 
+                [ngTemplateOutletContext] ="{$implicit:'Guest',name:'Ibha', message:'Welcome to our site'}">
+  </ng-container> 
+
+  <ng-container [ngTemplateOutlet]="template3" 
+  [ngTemplateOutletContext] ="{$implicit:'Guest', message:'Welcome to our site'}">
+</ng-container> 

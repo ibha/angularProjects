@@ -1,0 +1,7 @@
+<form #numberForm="ngForm">
+    <label>Enter the number</label>
+    <input type="text"  [(ngModel)]="value" name="value"/>
+    <button (submit)=onSubmit()>Submit</button>
+</form>
+
+Converted number is {{numberInWords}}

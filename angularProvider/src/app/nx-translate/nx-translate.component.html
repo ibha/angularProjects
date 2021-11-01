@@ -1,0 +1,6 @@
+<div>
+  <select id="select" name="language" #selectedLanguage (change)="onChange(selectedLanguage.value)">
+    <option [selected]="lang=='en'" value="en">English</option>
+    <option [selected]="lang=='de'" value="de">Deutsch</option>
+  </select>
+</div>
